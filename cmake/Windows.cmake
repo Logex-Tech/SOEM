@@ -19,7 +19,7 @@ target_include_directories(soem PUBLIC
 )
 
 target_compile_options(soem PUBLIC
-  $<$<C_COMPILER_ID:GNU>:-std=c11>
+  $<$<AND:$<C_COMPILER_ID:GNU>,$<COMPILE_LANGUAGE:C>>:-std=c11>
 )
 
 target_compile_definitions(soem PUBLIC
